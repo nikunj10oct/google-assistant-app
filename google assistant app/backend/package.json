@@ -1,0 +1,13 @@
+{
+  "name": "assistant-backend",
+  "version": "1.0.0",
+  "description": "Backend for Real-Time Assistant App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4"
+  }
+}
