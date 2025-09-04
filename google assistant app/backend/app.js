@@ -13,5 +13,9 @@ app.use('/api/news', newsRoutes);
 app.use('/api/music', musicRoutes);
 app.use('/api/user', userRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Google Assistant Backend is Running!');
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
