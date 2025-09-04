@@ -1,6 +1,8 @@
 # Google Assistant App
 
-This repository contains a Google Assistant-inspired project with separate backend and mobile (React Native) codebases.
+A project inspired by Google Assistant, featuring a Node.js backend and a React Native mobile app.
+
+---
 
 ## 📁 Folder Structure
 
@@ -29,9 +31,9 @@ This repository contains a Google Assistant-inspired project with separate backe
 README.md
 ```
 
-- **/backend:** Node.js/Express REST API server
-- **/mobile:** React Native mobile application (not deployed on Render)
-- **/components:** Shared or extra JS components
+- **/backend** — Node.js/Express REST API server
+- **/mobile** — React Native mobile application
+- **/components** — Shared or extra JS components
 
 ---
 
@@ -46,32 +48,35 @@ README.md
 4. Click **"Save"** or **"Update Fields"** and deploy.
 5. After build, you’ll get a public API URL (e.g., `https://your-app.onrender.com`).
 
-**If you see a "backend not found" error:**  
-Double-check that your GitHub repo root contains a folder named `backend` (not that everything is inside another folder like `google-assistant-app/backend`).  
-If your repo root _is_ `google-assistant-app` (with `backend` inside), set the root directory in Render to `google-assistant-app/backend`.
+---
+
+## 💡 Troubleshooting
+
+### 404 or backend errors on Render
+- Double-check the **Root Directory** setting in your Render service.
+  - If your backend code is in a `backend` folder at the root of your repo, set Root Directory to `backend`.
+  - If the code is in the root (no `backend` folder), leave Root Directory blank.
+- Make sure your GitHub repo actually has a folder named `backend` at the top level if you set Root Directory to `backend`.
+- After making changes, always redeploy your service on Render.
+
+### First request is slow
+- Free Render plans may “sleep” after a period of inactivity.
+- The first request after sleeping can take up to 1 minute to respond (“cold start”).
+- This is normal for free hosting services and will resolve itself after the first request.
 
 ---
 
 ## 📱 Running the Mobile App
 
-You cannot deploy the React Native app to Render.  
-To run the mobile app locally:
+> **Note:** You cannot deploy the React Native app to Render.  
+> To run the mobile app locally:
 
-```bash
+```sh
 cd mobile
 npm install
 npm start
 ```
 Or use [Expo Go](https://expo.dev/) for live reload and device preview.
-
----
-
-## 💡 Troubleshooting
-
-- **404 or backend errors on Render:**  
-  Double-check the Render root directory and that your backend folder is at the correct path in your GitHub repo.
-- **First request is slow:**  
-  Free Render plans may “sleep”; first request may take up to 1 minute to respond.
 
 ---
 
